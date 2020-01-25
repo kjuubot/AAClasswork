@@ -1,0 +1,10 @@
+<h1>RENT A CAT</h1>
+<ul>
+  <% @kitties.each do |kitty| %>
+    <li><ul>
+      <li><%= kitty.name %></li>
+      <li><%= kitty.birth_date %></li>
+      <li><%= kitty.color %></li>
+    </ul></li>
+    <% end %>
+</ul>
