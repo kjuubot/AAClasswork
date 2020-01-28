@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+     
+    <h1>
+      <%= "Hi #{current_user.username}" if logged_in? %>
+    </h1>
+    <% if logged_in? %>
+      <Form action = <%=session_url %> method="POST"> 
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Log out">
+      </Form>
+    <% else %>
+      <a href="<%= new_session_url  %>"> Log In</a> 
+    <% end %>
+
+
+    <%= yield %>
+  </body>
+</html>
