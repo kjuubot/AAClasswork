@@ -6,6 +6,7 @@ class CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    debugger
     render :show
   end
 
