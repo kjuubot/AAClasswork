@@ -1,0 +1,13 @@
+<h1>Edit <%= "#{@sub.title}" %></h1>
+<form action="<%= sub_url %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <label>Title
+    <input type="text" name="sub[title]">
+  </label>
+  <br>
+  <label>Description
+    <textarea name="sub[description]"></textarea>
+  </label>
+  <br>
+  <input type="submit" value="Submit">
+</form>
