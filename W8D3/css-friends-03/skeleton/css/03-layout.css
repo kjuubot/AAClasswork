@@ -1,0 +1,29 @@
+/* PHASE 3: Layout */
+.content {
+  display: flex;
+  min-height: 200px;
+  border: 1px solid red;
+  padding: 20px;
+  justify-content: center;
+  marigin: 0 auto;
+}
+
+.content-sidebar {
+  width: 20%;
+  min-height: 200px;
+  border: 1px solid red;
+  padding: 20px;
+  background-color: rgb(139, 139, 236);
+}
+
+.content-main {
+  width: 80%;
+  min-height: 200px;
+  border: 1px solid red;
+  padding: 20px;
+  background-color: rgb(161, 202, 238);
+}
+
+.content-main div {
+  padding: 5px;
+}
