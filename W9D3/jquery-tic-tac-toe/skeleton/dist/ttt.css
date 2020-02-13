@@ -1,0 +1,31 @@
+/* $ul.attr("style", "display: flex", "width: fixed", "flex-wrap: wrap")*/
+
+ul {
+    border: 2px solid black;
+    display: flex;
+    width: 312px;
+    flex-wrap: wrap;
+    height: 312px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    display: flex;
+    border: 2px solid black;
+    width: 100px;
+    background-color: lightgray;
+    height: 100px;
+    font-family: sans-serif;
+    font-size: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+li:hover {
+    background-color: lightyellow ;
+}
+
+.clicked {
+    background-color: white;
+}
