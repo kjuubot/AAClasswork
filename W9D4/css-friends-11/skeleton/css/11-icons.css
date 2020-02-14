@@ -1,0 +1,24 @@
+/* PHASE 11: Icons */
+[class*="icon-"] {
+    background-image: url("../sprite.png");
+    background-size: 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid red;
+    overflow: hidden;
+    padding-top: 0;
+    /* height: 0; */
+}
+
+.icon-comment {
+    background-position: 0%;
+}
+
+.icon-reblog {
+    background-position: 50%;
+}
+
+.icon-favorite {
+
+}
