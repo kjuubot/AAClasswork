@@ -1,0 +1,59 @@
+import React from 'react';
+
+class TodoForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: 1,
+      title: "",
+      body: ""
+    };
+    this.updateTitle = this.updateTitle.bind(this);
+    this.updateBody = this.updateBody.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  updateTitle(e) {
+    this.setState({
+      title: e.target.value
+    });
+  }
+  
+  updateBody(e) {
+    this.setState({
+      body: e.target.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const todo = {
+      id: Math.floor(Math.random() * 10000) + 1,
+      title: this.state.title,
+      body: this.state.body
+    };
+    this.props.addTodo(todo);
+  }
+
+  render(){
+    return(
+      <div>
+        <h2>Create Todo Item</h2>
+        <form onSubmit={this.handleSubmit}>
+          <label>Title:
+            <input type="text" onChange={this.updateTitle} value={this.state.title} />
+          </label>
+          <br/>
+          <label>Description:
+            <input type="text" onChange={this.updateBody} value={this.state.body} />
+          </label>
+          <br/>
+          <input type="submit" value="Create" />
+        </form>
+      </div>
+    );
+  }
+
+}
+
+export default TodoForm;
